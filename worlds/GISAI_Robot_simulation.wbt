@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.5937109571123625 0.7629964420703846 -0.25562419445869444 0.6099297163426982
-  position -0.8975504325805087 -0.020456849455429832 0.5500355515416614
+  orientation -0.1399310561001067 0.010571565732933878 0.9901048134095012 2.9922860511472553
+  position 0.7824334540862684 -0.16851619833194464 0.31350751352291206
 }
 TexturedBackground {
 }
@@ -17,10 +17,9 @@ TexturedBackgroundLight {
 RectangleArena {
 }
 Solid {
-  rotation 0.9999968749624512 0.002499992187406128 1.0217389476770395e-05 0
   children [
     Transform {
-      rotation 0.9996002398401118 0.019992004796802236 0.019992004796802236 1.592894744620203
+      rotation 1 0 0 1.55
       scale 0.001 0.001 0.001
       children [
         Shape {
@@ -28,11 +27,54 @@ Solid {
           }
           geometry Mesh {
             url [
-              "../Ensamblaje.STL"
+              "Ensamblaje_Base_webots.STL"
             ]
           }
         }
       ]
     }
   ]
+  name "Base"
+}
+DEF Wheel_1 Solid {
+  translation -0.00999979 -0.087 0.0699999
+  rotation -0.577349935856137 0.5773509358560258 -0.577349935856137 2.09439
+  children [
+    Transform {
+      scale 0.001 0.001 0.001
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Mesh {
+            url [
+              "Rueda_Webots.STL"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "Wheel_1"
+}
+DEF Wheel_2 Solid {
+  translation 0.18 -0.16 -8.15696e-08
+  rotation 0 1 0 -1.5707953071795862
+  children [
+    Transform {
+      scale 0.001 0.001 0.001
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Mesh {
+            url [
+              "Rueda_Webots.STL"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+  name "Wheel_2"
 }
