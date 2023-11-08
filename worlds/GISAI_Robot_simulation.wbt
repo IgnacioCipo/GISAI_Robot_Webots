@@ -7,14 +7,15 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.38301574349060075 -0.7269062132012623 0.5700055240502004 4.790926475963783
-  position -0.5868015140145477 0.41944137047799857 1.0912626670396335
+  orientation 0.49997322364670865 -0.7615274112766011 -0.41243517976850214 5.39572731795326
+  position -1.2151296486722725 -0.6126332808542216 1.1760144161377935
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  translation -0.02 0 9.38568e-08
   rotation 0 1 0 4.692820414042842e-06
 }
 Solid {
@@ -38,18 +39,20 @@ Solid {
   name "Base"
 }
 Robot {
-  translation -0.04 0.09 0
+  translation -0.1 -2.58874e-18 0.01
+  rotation -0.13514890364660637 -0.9876137773773201 0.07971073063033231 3.9107227780471177e-16
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
+        position 2.1004412448316683e-24
       }
       device [
         DEF motor_1 RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation -0.1 -0.16 0.0100001
-        rotation 0 1 0 -1.5707953071795862
+        translation 0.1 -0.04 0.0100001
+        rotation 7.03408435996571e-17 -0.9999999999999999 -2.6068318601765965e-17 1.5707953071795866
         children [
           Transform {
             scale 0.001 0.001 0.001
@@ -66,9 +69,34 @@ Robot {
             ]
           }
         ]
-        boundingObject USE wheel
+        boundingObject Pose {
+        }
         physics DEF wheel_physics Physics {
         }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        position 1.422987429480792e-21
+      }
+      device [
+        RotationalMotor {
+          name "motor_2"
+        }
+      ]
+      endPoint Solid {
+        translation -0.09 -0.04 0.0799995
+        rotation -8.478067017101336e-17 1 -4.050852552195153e-17 1.5707999999999998
+        children [
+          Transform {
+            scale 0.001 0.001 0.001
+            children [
+              USE wheel
+            ]
+          }
+        ]
+        name "solid(1)"
+        physics USE wheel_physics
       }
     }
     Pose {
@@ -78,7 +106,7 @@ Robot {
       ]
     }
     DEF Body Transform {
-      translation -0.28 0 0
+      translation -0.08 0.12 4.40784e-07
       rotation 1 0 0 1.5708
       scale 0.001 0.001 0.001
       children [
@@ -96,6 +124,7 @@ Robot {
   ]
   physics Physics {
   }
+  controller "sumo_supervisor"
 }
 DEF Wheel_1 Solid {
   translation -0.00999979 -0.087 0.0699999
