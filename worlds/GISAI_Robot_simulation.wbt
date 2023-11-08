@@ -7,14 +7,15 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.1399310561001067 0.010571565732933878 0.9901048134095012 2.9922860511472553
-  position 0.7824334540862684 -0.16851619833194464 0.31350751352291206
+  orientation -0.3658255953523802 -0.3375537201026558 0.8673114318570547 4.4914267511230435
+  position -0.1274767989323618 1.0533584536201532 1.0447897859804351
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
+  rotation 0 1 0 4.692820414042842e-06
 }
 Solid {
   children [
@@ -35,6 +36,55 @@ Solid {
     }
   ]
   name "Base"
+}
+Robot {
+  children [
+    DEF Body Transform {
+      translation -0.28 0 0
+      rotation 1 0 0 1.5708
+      scale 0.001 0.001 0.001
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry Mesh {
+            url [
+              "Ensamblaje_Base_webots.STL"
+            ]
+          }
+        }
+      ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      device [
+        DEF motor_1 RotationalMotor {
+        }
+      ]
+      endPoint Solid {
+        rotation 0 1 0 -1.5707953071795862
+        children [
+          Transform {
+            scale 0.001 0.001 0.001
+            children [
+              Shape {
+                appearance PBRAppearance {
+                }
+                geometry Mesh {
+                  url [
+                    "Rueda_Webots.STL"
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+  physics Physics {
+  }
 }
 DEF Wheel_1 Solid {
   translation -0.00999979 -0.087 0.0699999
