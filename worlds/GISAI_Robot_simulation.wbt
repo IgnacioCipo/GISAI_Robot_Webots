@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.49997322364670865 -0.7615274112766011 -0.41243517976850214 5.39572731795326
-  position -1.2151296486722725 -0.6126332808542216 1.1760144161377935
+  orientation -0.2252634827783066 -0.18975813102898678 0.9556402121274373 3.5007292978455418
+  position 859.4189593510122 322.5788964140843 630.4387912954381
 }
 TexturedBackground {
 }
@@ -17,42 +17,26 @@ TexturedBackgroundLight {
 RectangleArena {
   translation -0.02 0 9.38568e-08
   rotation 0 1 0 4.692820414042842e-06
-}
-Solid {
-  children [
-    Transform {
-      rotation 1 0 0 1.55
-      scale 0.001 0.001 0.001
-      children [
-        Shape {
-          appearance PBRAppearance {
-          }
-          geometry Mesh {
-            url [
-              "Ensamblaje_Base_webots.STL"
-            ]
-          }
-        }
-      ]
-    }
-  ]
-  name "Base"
+  floorSize 1000 1000
+  floorTileSize 100 100
+  wallThickness 0.011
+  wallHeight 100
 }
 Robot {
-  translation -0.1 -2.58874e-18 0.01
+  translation -34.58 -1.07743e-15 0.01
   rotation -0.13514890364660637 -0.9876137773773201 0.07971073063033231 3.9107227780471177e-16
   children [
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 2.1004412448316683e-24
+        position -4.73275636348325e-06
       }
       device [
         DEF motor_1 RotationalMotor {
         }
       ]
       endPoint Solid {
-        translation 0.1 -0.04 0.0100001
-        rotation 7.03408435996571e-17 -0.9999999999999999 -2.6068318601765965e-17 1.5707953071795866
+        translation 0.1 -0.03999995267151513 0.010000289310142544
+        rotation -2.366380594459105e-06 -0.9999999999944001 2.3663781817067226e-06 1.5707953071851857
         children [
           Transform {
             scale 0.001 0.001 0.001
@@ -73,11 +57,13 @@ Robot {
         }
         physics DEF wheel_physics Physics {
         }
+        linearVelocity 1.2201104466620148e-10 1.1890738141238217e-07 3.5301312817637595e-07
+        angularVelocity -1.1889123053665359e-05 1.2128900448660849e-08 2.0015012245770206e-11
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 1.422987429480792e-21
+        position 4.413865130591605e-06
       }
       device [
         RotationalMotor {
@@ -85,8 +71,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.09 -0.04 0.0799995
-        rotation -8.478067017101336e-17 1 -4.050852552195153e-17 1.5707999999999998
+        translation -0.08999999999999997 -0.04000035310661385 0.07999932344461548
+        rotation 2.2069244587027832e-06 0.9999999999951295 2.2069325652481276e-06 1.5708000000048705
         children [
           Transform {
             scale 0.001 0.001 0.001
@@ -97,6 +83,8 @@ Robot {
         ]
         name "solid(1)"
         physics USE wheel_physics
+        linearVelocity -8.722625883774691e-10 -1.4487090844499453e-06 -8.46738940197177e-07
+        angularVelocity 1.811860624389008e-05 -1.0886553970382322e-08 -4.304100325859631e-11
       }
     }
     Pose {
@@ -105,10 +93,9 @@ Robot {
         }
       ]
     }
-    DEF Body Transform {
+    DEF Body Pose {
       translation -0.08 0.12 4.40784e-07
       rotation 1 0 0 1.5708
-      scale 0.001 0.001 0.001
       children [
         Shape {
           appearance PBRAppearance {
@@ -122,16 +109,14 @@ Robot {
       ]
     }
   ]
-  physics Physics {
-  }
-  controller "sumo_supervisor"
+  boundingObject USE Body
+  controller "<none>"
 }
 DEF Wheel_1 Solid {
-  translation -0.00999979 -0.087 0.0699999
+  translation -44 -90 80
   rotation -0.577349935856137 0.5773509358560258 -0.577349935856137 2.09439
   children [
-    Transform {
-      scale 0.001 0.001 0.001
+    Pose {
       children [
         Shape {
           appearance PBRAppearance {
@@ -146,13 +131,13 @@ DEF Wheel_1 Solid {
     }
   ]
   name "Wheel_1"
+  boundingObject USE wheel
 }
 DEF Wheel_2 Solid {
-  translation 0.18 -0.16 -8.15696e-08
+  translation 142.42 -162.24 8.12985
   rotation 0 1 0 -1.5707953071795862
   children [
-    Transform {
-      scale 0.001 0.001 0.001
+    Pose {
       children [
         Shape {
           appearance PBRAppearance {
@@ -167,4 +152,5 @@ DEF Wheel_2 Solid {
     }
   ]
   name "Wheel_2"
+  boundingObject USE wheel
 }
