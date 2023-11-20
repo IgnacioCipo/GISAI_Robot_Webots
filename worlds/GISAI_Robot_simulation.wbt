@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.3492255631016862 0.5447513081236879 -0.762422139220682 2.0025232808361806
-  position 2.9258928827833373 1.4574860154007363 2.9017948178509125
+  orientation 0.20901698299329052 -0.959626574453511 0.188225233226054 5.233640896264354
+  position 2.2160654718467336 -0.3394634083190828 0.599077286096239
 }
 TexturedBackground {
 }
@@ -20,9 +20,109 @@ RectangleArena {
   floorSize 10 10
 }
 Robot {
-  translation 2.8083731702954866 0.19678366261474603 0.052011388707013356
-  rotation 0.031089218630181516 0.016566759934891807 0.9993793088463582 0.9841101100724171
+  translation 2.602594735585539 -0.46388855536515095 0.05201732807150444
+  rotation -0.0022375755353461705 0.0009448811263832534 -0.9999970502233397 1.1888244597337232
   children [
+    DEF distance_sensor Solid {
+      translation -0.085 -0.16 0.02
+      rotation -0.9351132545462786 0.25056206820525934 0.25056306820553154 -1.6378353071795866
+      children [
+        DEF distance_sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 1 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.01
+          }
+        }
+        DistanceSensor {
+          rotation 0 1 0 -1.5707953071795862
+          name "ds_front_right"
+        }
+      ]
+      name "ds_front_right"
+      boundingObject USE distance_sensor
+      physics Physics {
+      }
+    }
+    DEF distance_sensor Solid {
+      translation 0.085 -0.16 0.02
+      rotation 0.9351132545462786 0.25056206820525934 0.25056306820553154 1.63784
+      children [
+        DEF distance_sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 1 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.01
+          }
+        }
+        DistanceSensor {
+          rotation 0 1 0 -1.5707953071795862
+          name "ds_front_left"
+        }
+      ]
+      name "ds_front_left"
+      boundingObject USE distance_sensor
+      physics Physics {
+      }
+    }
+    DEF distance_sensor Solid {
+      translation -0.085 0.16 0.0199991
+      rotation 0.9351132545462786 0.25056206820525934 0.25056306820553154 1.63784
+      children [
+        DEF distance_sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 1 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.01
+          }
+        }
+        DistanceSensor {
+          rotation 0 -1 0 -1.5707953071795862
+          name "ds_back_left"
+        }
+      ]
+      name "ds_back_left"
+      boundingObject USE distance_sensor
+      physics Physics {
+      }
+    }
+    DEF distance_sensor Solid {
+      translation 0.085 0.16 0.02
+      rotation -0.9351132545462786 0.25056206820525934 0.25056306820553154 -1.6378353071795866
+      children [
+        DEF distance_sensor Shape {
+          appearance PBRAppearance {
+            baseColor 0.9 1 1
+            roughness 1
+            metalness 0
+          }
+          geometry Cylinder {
+            height 0.01
+            radius 0.01
+          }
+        }
+        DistanceSensor {
+          rotation 0 -1 0 -1.5707953071795862
+          name "ds_back_right"
+        }
+      ]
+      name "ds_back_right"
+      boundingObject USE distance_sensor
+      physics Physics {
+      }
+    }
     DEF distance_sensor Solid {
       translation 0 0.18 0.02
       rotation 1 0 0 1.5708
@@ -40,10 +140,10 @@ Robot {
         }
         DistanceSensor {
           rotation 0 -1 0 -1.5707953071795862
-          name "ds_front_1"
+          name "ds_back_middle"
         }
       ]
-      name "ds_back_1"
+      name "ds_back_middle"
       boundingObject USE distance_sensor
       physics Physics {
       }
@@ -65,10 +165,10 @@ Robot {
         }
         DistanceSensor {
           rotation 0 1 0 -1.5707953071795862
-          name "ds_front_1"
+          name "ds_front_middle"
         }
       ]
-      name "sensor_solid"
+      name "front_middle_sensor"
       boundingObject USE distance_sensor
       physics Physics {
       }
@@ -94,7 +194,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 213.55398533935028
+        position 282.7162751098908
         anchor 0.17 0 0.01
       }
       device [
@@ -103,8 +203,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.17051543715123266 -2.821136428339886e-05 0.010006941623586863
-        rotation -0.5903968005576863 -0.5495666425729747 0.5911075395072507 2.140159431739387
+        translation 0.17070888513689342 -4.2081842914518734e-05 0.009935331011483476
+        rotation 0.5842297922887738 0.5679139563017037 -0.5797838287154641 4.170160263619587
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -121,13 +221,13 @@ Robot {
         boundingObject USE wheel
         physics DEF wheel_physics Physics {
         }
-        linearVelocity 0.27123893868514204 -0.179558439112272 -2.518771179914347e-06
-        angularVelocity 2.7320496540273367 4.128074982685695 -0.13246995962652083
+        linearVelocity -0.2823884221313961 -0.11688440588352572 -2.5680594550107428e-05
+        angularVelocity 1.8206559157148503 -4.3597120425153815 -0.6570489109375177
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 80.86608133618537
+        position 100.66423908038841
         anchor -0.17 0 0.01
       }
       device [
@@ -136,16 +236,16 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.17052340309558034 6.200781007587823e-05 0.01005500926539667
-        rotation -0.3689685311658963 -0.8532829658412476 0.3684703559507131 1.727599671072686
+        translation -0.17071918891533222 -7.359699127024955e-05 0.010119915488065642
+        rotation 0.06748539943480347 -0.995567792170291 -0.06550184773193252 1.5729037977733435
         children [
           USE wheel
         ]
         name "solid(2)"
         boundingObject USE wheel
         physics USE wheel_physics
-        linearVelocity 0.23504153098962272 -0.15557512498052536 -2.5842621332569345e-06
-        angularVelocity 2.3463691956635375 3.54391594508066 -0.13161991340638077
+        linearVelocity -0.08218770674352781 -0.03398434856207558 -0.000160078923386515
+        angularVelocity 0.467157202478398 -1.1319567728906772 -0.6373293490530484
       }
     }
   ]
@@ -156,6 +256,6 @@ Robot {
   physics Physics {
   }
   controller "my_controller"
-  linearVelocity 0.2526379006131757 -0.16717147714489733 -5.7102764988364053e-05
-  angularVelocity 0.028840693435309414 0.041184952976314505 -0.12784503915089312
+  linearVelocity -0.183961409798919 -0.07627324954770784 4.4535016055898574e-05
+  angularVelocity -0.06856751952980684 0.16156289363469145 -0.6354403205969007
 }
