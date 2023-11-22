@@ -7,8 +7,8 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 WorldInfo {
 }
 Viewpoint {
-  orientation 0.20901698299329052 -0.959626574453511 0.188225233226054 5.233640896264354
-  position 2.2160654718467336 -0.3394634083190828 0.599077286096239
+  orientation 0.4951511792888273 0.2605533066621103 -0.8288167976316139 2.8341625570500306
+  position 6.94503771446844 0.6144791958029537 11.526094257540631
 }
 TexturedBackground {
 }
@@ -19,9 +19,293 @@ RectangleArena {
   rotation 0 1 0 4.692820414042842e-06
   floorSize 10 10
 }
+DEF Obstacle Solid {
+  translation 3.9192930019060297 2.671892446127738 0.18025743214795484
+  rotation 2.9227862958359814e-06 0.010089943133608604 0.9999490952238608 0.0005793759029022922
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(12)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.785125759899995e-09 2.223960135325168e-17 -2.7293492132479308e-14
+  angularVelocity 1.0359389005931141e-16 -1.634489165788919e-16 1.1997179313271072e-16
+}
+DEF Obstacle Solid {
+  translation 1.3631529246308984 -3.6896375538497974 0.18026942765429071
+  rotation 2.922786241167343e-06 0.010089943135938306 0.9999490952238372 0.0005793759027664901
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(11)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.785125781566349e-09 7.349731039383727e-19 -2.7355797364735055e-14
+  angularVelocity -5.5203652183728435e-17 -4.9985119138132647e-17 -1.0533831005721323e-16
+}
+DEF Obstacle Solid {
+  translation -3.2476372753597857 -0.9025345561470387 0.1802910652646663
+  rotation 2.9227863457454205e-06 0.01008994286976635 0.9999490952265232 0.0005793759180523293
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(10)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.785125796326286e-09 -1.2924269875153441e-17 -2.7321545905657893e-14
+  angularVelocity 8.316819580284533e-17 -3.632182766585409e-18 4.238941996171785e-18
+}
+DEF Obstacle Solid {
+  translation -3.6660255421732657 -3.792783344518495 0.1802930286856658
+  rotation 2.9227744007836885e-06 0.010485073414402147 0.9999450301026312 0.0005575421071778692
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(9)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.7851257988869025e-09 2.6734035941483312e-17 -2.731080616780755e-14
+  angularVelocity 2.490762095773744e-17 1.6002325210713735e-17 8.623736430412329e-17
+}
+DEF Obstacle Solid {
+  translation 3.292393068525499 -2.8784375538988543 0.1802603740767598
+  rotation 2.9227862416186336e-06 0.010089943131553812 0.9999490952238816 0.000579375903017442
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(8)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.785125780799691e-09 1.2052531852030008e-17 -2.735278907790844e-14
+  angularVelocity 1.9666802334798022e-16 -3.3696933436404046e-17 -4.758550905090242e-17
+}
+DEF Obstacle Solid {
+  translation -3.6401435877028168 3.657187343125335 0.18029290722630148
+  rotation 2.9228442700171686e-06 0.007881792822758476 0.9999689381842599 0.0007416929041722074
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(7)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.78512581128138e-09 -9.452146788869547e-18 -2.7281173562958934e-14
+  angularVelocity 1.3926916047822942e-16 1.0287292310300753e-16 6.672723740094463e-17
+}
+DEF Obstacle Solid {
+  translation 3.398732932683991 3.871582446148282 0.18025987504287444
+  rotation 2.9227864592860336e-06 0.010089943135707007 0.9999490952238397 0.0005793759027810082
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(6)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.785125814352628e-09 2.4650779560507808e-17 -2.725510621654421e-14
+  angularVelocity -6.969831969470439e-17 1.0513875158344181e-16 1.0675723252292395e-16
+}
+DEF Obstacle Solid {
+  translation -1.2274873289451373 -1.7912775547090412 0.18028158506375824
+  rotation 2.922786246820543e-06 0.010089943052807962 0.9999490952246761 0.0005793759075414611
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(5)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.785125764783147e-09 2.2342563294208085e-17 -2.730788735524394e-14
+  angularVelocity -9.661357461056151e-18 -1.6010718216835202e-16 1.118245046633526e-16
+}
+DEF Obstacle Solid {
+  translation -2.4091794830435407 1.5279937381471802 0.18028713053282217
+  rotation 2.922859301365048e-06 0.00719930246795226 0.9999740846819141 0.0008120050215432002
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(4)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.7851258114950376e-09 2.3826735448123974e-17 -2.728888567134728e-14
+  angularVelocity -8.624660819959946e-17 3.404597369254878e-17 -7.005930172911284e-17
+}
+DEF Obstacle Solid {
+  translation -0.000199531 2.86946 0.180276
+  rotation 2.922786259796818e-06 0.010089943052182743 0.9999490952246823 0.0005793759075715016
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(3)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+}
+DEF Obstacle Solid {
+  translation 0.00235246090407747 -1.820507553831438 0.1802758136464864
+  rotation 2.9227862811844883e-06 0.010089943140647234 0.9999490952237897 0.000579375902491193
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(2)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.7851257980994605e-09 2.797604619451272e-17 -2.7234887332682622e-14
+  angularVelocity -2.230567960354368e-16 4.5371706963208305e-17 5.5417012616015707e-17
+}
+DEF Obstacle Solid {
+  translation 0.0019156664636614021 -0.0006986293851032148 0.18027581830206404
+  rotation -2.643718576595862e-05 0.007201542803623145 0.9999740682049324 0.0007991078715808122
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 1.7921729194731858e-07 -4.4611341198563834e-08 -2.3761915905569906e-08
+  angularVelocity 2.228370896071383e-07 8.663076034272158e-07 -1.175447887481278e-12
+}
+DEF Obstacle Solid {
+  translation 2.23102291806415 0.0008554047517013345 0.18026535489626877
+  rotation 2.9227861777461343e-06 0.010089943136084674 0.9999490952238358 0.0005793759027550186
+  children [
+    DEF obstacle_cylinder_shape Shape {
+      appearance PBRAppearance {
+        baseColor 1 0 0
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.4
+        radius 0.2
+      }
+    }
+  ]
+  name "Obstacle_cylinder(1)"
+  boundingObject USE obstacle_cylinder_shape
+  physics Physics {
+  }
+  linearVelocity 5.785125825827703e-09 -3.7176889545105e-18 -2.7287707927770026e-14
+  angularVelocity -5.792466784519235e-18 1.7076505519430489e-16 1.1020666138463211e-17
+}
 Robot {
-  translation 2.602594735585539 -0.46388855536515095 0.05201732807150444
-  rotation -0.0022375755353461705 0.0009448811263832534 -0.9999970502233397 1.1888244597337232
+  translation -0.30160267127980206 0.7283685153479132 0.0520764422136507
+  rotation 0.035052866421580536 -0.01997433100220611 -0.99918582989184 1.048573062975685
   children [
     DEF distance_sensor Solid {
       translation -0.085 -0.16 0.02
@@ -194,7 +478,7 @@ Robot {
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 282.7162751098908
+        position 375.51372633634634
         anchor 0.17 0 0.01
       }
       device [
@@ -203,8 +487,8 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation 0.17070888513689342 -4.2081842914518734e-05 0.009935331011483476
-        rotation 0.5842297922887738 0.5679139563017037 -0.5797838287154641 4.170160263619587
+        translation 0.17070888513689342 -6.925756071175597e-05 0.010034005144656213
+        rotation -0.7072732724145113 -0.0352560382879551 0.7060605709797897 3.080041078412106
         children [
           DEF wheel Shape {
             appearance PBRAppearance {
@@ -221,13 +505,13 @@ Robot {
         boundingObject USE wheel
         physics DEF wheel_physics Physics {
         }
-        linearVelocity -0.2823884221313961 -0.11688440588352572 -2.5680594550107428e-05
-        angularVelocity 1.8206559157148503 -4.3597120425153815 -0.6570489109375177
+        linearVelocity 0.2802714070139685 0.1616323673099309 0.00021885730894142955
+        angularVelocity -2.4491605818837536 4.246721738782516 -9.270558641385953e-05
       }
     }
     HingeJoint {
       jointParameters HingeJointParameters {
-        position 100.66423908038841
+        position 51.75098225092187
         anchor -0.17 0 0.01
       }
       device [
@@ -236,16 +520,16 @@ Robot {
         }
       ]
       endPoint Solid {
-        translation -0.17071918891533222 -7.359699127024955e-05 0.010119915488065642
-        rotation 0.06748539943480347 -0.995567792170291 -0.06550184773193252 1.5729037977733435
+        translation -0.17071918891533222 -0.00013302087336244486 0.009954155822049615
+        rotation 0.5615373132442564 -0.6100350971357063 -0.559046533033746 2.045367976098305
         children [
           USE wheel
         ]
         name "solid(2)"
         boundingObject USE wheel
         physics USE wheel_physics
-        linearVelocity -0.08218770674352781 -0.03398434856207558 -0.000160078923386515
-        angularVelocity 0.467157202478398 -1.1319567728906772 -0.6373293490530484
+        linearVelocity 0.2802872932600523 0.16165075330632972 0.00019527107871466741
+        angularVelocity -2.4491631364435866 4.246723640540434 -9.34372660609728e-05
       }
     }
   ]
@@ -256,6 +540,6 @@ Robot {
   physics Physics {
   }
   controller "my_controller"
-  linearVelocity -0.183961409798919 -0.07627324954770784 4.4535016055898574e-05
-  angularVelocity -0.06856751952980684 0.16156289363469145 -0.6354403205969007
+  linearVelocity 0.28034841097964486 0.16166988822690087 -0.00029261941448622327
+  angularVelocity -0.0018994611126500437 0.0016196546569095943 -0.001332246621323641
 }
